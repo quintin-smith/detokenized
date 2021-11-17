@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Detokenized</title>
+<meta charset="UTF-8">
+</head>
+
+<body>
+<div>
+<p id="num4"></p>
+<script>
+// Change the number in each row
+document.getElementsByTagName("p")[0].innerHTML =
+Math.ceil(3.22);
+</script>
+<p id="address1"></p>
+<script>
+// Addressable space
+document.getElementById("address1").innerHTML =
+Math.floor(Math.random() * 21000000);
+</script>
+<p id="address3"></p>
+<script>
+// Addressable space
+document.getElementById("address3").innerHTML =
+Math.floor(Math.random() * 21000000);
+</script>
+<div>
+<script>
+// Strip spaces
+function stripSpaces(string) {
+ return string.split(' ').join('');
+}
+</script>
+<form>
+<input type="text" onblur="this.value=stripSpaces(this.value);" style="height: 50px; width: 200px">
+<input type="button" value="Generate" style="height: 50px; width: 70px">
+</form>
+</div>
+<br>© 2021 Quintin Smith
+</div>
+</body>
+</html>
+
+
+
